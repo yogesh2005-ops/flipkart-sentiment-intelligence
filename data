@@ -1,0 +1,104 @@
+# Dataset
+
+The original Flipkart review dataset is **not included** in this repository due to GitHub file size limitations and licensing considerations.
+
+## Dataset Source
+
+This project uses the **Flipkart Product Reviews Dataset** available on Kaggle (Link : https://www.kaggle.com/datasets/mansithummar67/flipkart-product-review-dataset)
+
+Download the dataset from Kaggle and place it inside the `data/` directory.
+
+```
+data/
+└── flipkart_product.csv
+```
+
+The cleaning pipeline expects the input file to be named:
+
+```
+flipkart_product.csv
+```
+
+---
+
+# Expected Columns
+
+The raw dataset should contain the following columns:
+
+| Column | Description |
+|---------|-------------|
+| ProductName | Product title |
+| Price | Product price |
+| Rate | Customer rating (1–5) |
+| Review | Full customer review |
+| Summary | Review summary |
+
+---
+
+# Generate the Cleaned Dataset
+
+Run the data cleaning pipeline:
+
+```bash
+python src/01_data_cleaning.py data/flipkart_product.csv data/flipkart_cleaned_final.csv
+```
+
+This script performs:
+
+- Character encoding repair
+- Duplicate removal
+- Missing value handling
+- Price and rating normalization
+- Brand extraction
+- Product categorization
+- Category grouping
+- Review text cleaning
+- VADER sentiment analysis
+- Rating–Sentiment mismatch detection
+
+The cleaned dataset (`flipkart_cleaned_final.csv`) is generated automatically and serves as the input for SQL analysis and the Power BI dashboard.
+
+---
+
+# Dataset Statistics
+
+After cleaning, the dataset contains approximately:
+
+- **162,183 customer reviews**
+- Product categories across Electronics, Fashion, Home, Beauty, Sports, Books, and more
+- Engineered features for business intelligence and NLP analysis
+
+---
+
+# Project Workflow
+
+```
+Raw Kaggle Dataset
+        │
+        ▼
+01_data_cleaning.py
+        │
+        ▼
+flipkart_cleaned_final.csv
+        │
+        ├────────► SQL Server
+        │             │
+        │             ▼
+        │       Business KPIs
+        │
+        └────────► 02_nlp_sentiment.py
+                      │
+                      ▼
+      Aspect Sentiment • LDA Topics • Word Clouds
+                      │
+                      ▼
+             Power BI Executive Dashboard
+```
+
+---
+
+# Notes
+
+- The raw dataset is intentionally excluded from this repository.
+- All results shown in the dashboard can be reproduced by running the provided Python scripts and SQL queries.
+- Generated outputs (CSV summaries, NLP reports, and word clouds) are produced automatically by the analysis pipeline.
