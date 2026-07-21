@@ -115,7 +115,7 @@ flipkart-sentiment-intelligence/
 │       ├── 05_price_rating_correlation.sql
 │       ├── 06_top10_most_reviewed.sql
 │       ├── 07_flagged_products.sql
-│       ├── 08_brand_ranking_electronics.sql
+│       ├── 08_brand_ranking.sql
 │       ├── 09_rating_sentiment_mismatch.sql
 │       ├── 10_review_length_vs_sentiment.sql
 │       ├── 11_csat_index.sql
