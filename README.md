@@ -188,6 +188,6 @@ pip install -r requirements.txt
 
 ## Author
 
-Yogesh — B.Tech Computer Science 
+K Yogesh Sathvik — B.Tech Computer Science 
 [LinkedIn : https://www.linkedin.com/in/k-yogesh-sathvik-0225ab371/]
 [Gmail: yogeshsai2005@gmail.com]
