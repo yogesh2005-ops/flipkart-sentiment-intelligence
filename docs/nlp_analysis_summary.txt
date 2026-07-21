@@ -1,0 +1,67 @@
+FLIPKART NLP ANALYSIS SUMMARY
+============================================================
+
+Dataset Shape: (164990, 13)
+
+TOP 10 NAIVE BIGRAMS
+----------------------------------------
+very bad : 426
+bad quality : 204
+poor quality : 191
+very poor : 184
+bad product : 137
+low quality : 118
+quality good : 111
+don buy : 109
+very very : 89
+worst product : 74
+
+TOP 15 NEGATION-AWARE BIGRAMS
+----------------------------------------
+not good : 526
+very bad : 426
+bad quality : 204
+poor quality : 191
+very poor : 184
+quality not : 150
+bad product : 137
+low quality : 118
+don buy : 109
+very very : 89
+worst product : 74
+waste money : 73
+quality very : 73
+good quality : 60
+product not : 50
+
+
+ASPECT SENTIMENT
+              Aspect  Mentions  Positive_%  Negative_%
+   Material & Fabric     24431        65.1        24.7
+     Value for Money     23774        70.2        20.4
+             Battery      3431        48.1        20.4
+          Size & Fit      4669        52.3        15.6
+Delivery & Packaging      6334        66.5        15.6
+              Camera      2483        66.4        11.9
+    Color/Appearance      4685        71.8        10.2
+             Comfort      2060        84.7         7.5
+
+FASHION ASPECT SENTIMENT
+              Aspect  Mentions  Negative_%
+   Material & Fabric      3210        38.4
+             Battery         3        33.3
+     Value for Money      1700        26.2
+Delivery & Packaging       195        20.5
+    Color/Appearance       546        19.2
+          Size & Fit       881        19.0
+              Camera        80        13.8
+             Comfort       546        13.0
+
+LDA TOPICS
+
+Topic 1: product, working, flipkart, worst, days, buy, return, service, got, time
+Topic 2: installation, tv, problem, good, time, working, satisfied, sound, wifi, work
+Topic 3: water, broken, damage, speed, product, time, motor, noise, using, got
+Topic 4: product, bad, money, waste, worst, buy, don, products, dont, experience
+Topic 5: good, quality, bad, product, low, size, small, price, material, ok
+Topic 6: quality, poor, product, plastic, hard, cheap, broken, broke, material, used
